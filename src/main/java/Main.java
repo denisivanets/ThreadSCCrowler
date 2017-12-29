@@ -26,7 +26,7 @@ public class Main {
     }
 
     private static void printResult() {
-        for (Map.Entry<String, List<String>> entry : CodeProcessor.counter.entrySet()) {
+        for (Map.Entry<String, List<String>> entry : Collector.getInstance().getCounter().entrySet()) {
             if (!isRightObject(entry.getKey())) {
                 System.out.println(entry.getKey() + ": " + printChild(entry.getValue()));
             }
